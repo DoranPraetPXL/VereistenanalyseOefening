@@ -7,8 +7,11 @@
             string userName = "Administrator";
             string password = "P@ssw0rd";
 
-            Console.WriteLine("Username: ");
+            Console.Write("Username: ");
             string inputUser = Console.ReadLine();
+
+            Console.Write("Password: ");
+            string inputPassword = Console.ReadLine();
         }
     }
 }
