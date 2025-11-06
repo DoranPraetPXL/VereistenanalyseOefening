@@ -18,6 +18,7 @@
 
                 if (inputUser == userName && inputPassword == password)
                 {
+                    Console.WriteLine($"Welcome, {inputUser}!");
                     return;
                 }
                 attempts++;
