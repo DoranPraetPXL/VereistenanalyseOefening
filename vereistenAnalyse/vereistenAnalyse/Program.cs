@@ -6,17 +6,25 @@
         {
             string userName = "Administrator";
             string password = "P@ssw0rd";
+            int attempts = 0;
 
-            Console.Write("Username: ");
-            string inputUser = Console.ReadLine();
-
-            Console.Write("Password: ");
-            string inputPassword = Console.ReadLine();
-
-            if (inputUser == userName && inputPassword == password)
+            while (attempts < 3)
             {
-                return;
+                Console.Write("Username: ");
+                string inputUser = Console.ReadLine();
+
+                Console.Write("Password: ");
+                string inputPassword = Console.ReadLine();
+
+                if (inputUser == userName && inputPassword == password)
+                {
+                    return;
+                }
+                attempts++;
+                Console.WriteLine($"Wrong login, {3-attempts} attempts left.");
             }
+            Console.WriteLine("To many attempts. Acces denied.");
+          
         }
     }
 }
