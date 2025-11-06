@@ -12,6 +12,11 @@
 
             Console.Write("Password: ");
             string inputPassword = Console.ReadLine();
+
+            if (inputUser == userName && inputPassword == password)
+            {
+                return;
+            }
         }
     }
 }
